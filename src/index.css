@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.navigation {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  flex: 3 3 40px;
+}
+.navigation li {
+  list-style: none;
+  padding-left: 0px;
+  color: #80008067;
+  font-size: 18px;
+}
+.nav-actions {
+  flex: 2 1 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu span {
+  margin: 0 0.5rem;
+  color: #800080;
+  font-size: 18px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.terms-conditions {
+  color: #800080;
+  font-size: 16px;
+}
+
+.dashboard {
+  padding: 1.2em;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: -2px 5px 36px -24px #4d4d4d;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-item-container {
+  display: flex;
+  justify-content: space-around;
+}
+.dashboard-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-heading {
+  color: #800080;
+  font-size: 14px;
+}
+.dashboard-value {
+  font-size: 32px;
+}
+
+.withdraw-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #800080;
+  padding: 0.7em 1.5em;
+  border-radius: 28px;
+  align-self: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  .navigation li {
+    font-size: 16px;
+  }
+  .menu span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .logo {
+    flex-grow: 0;
+  }
+  .nav-actions {
+    justify-self: flex-end;
+    color: white;
+    flex-basis: 0;
+    flex-grow: 0;
+  }
+  .user-icon {
+    display: none;
+  }
+  .nav-actions li {
+    display: none;
+  }
+  .dropdown svg path {
+    fill: #fff;
+    /* fill: #fff; */
+  }
+  .menu {
+    min-width: 150px;
+    border-radius: 10px;
+    background-color: #800080;
+    padding: 0.5em 1.2em;
+  }
+  .menu span {
+    color: white;
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .navigation {
+    margin: 0.3rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  .menu {
+    min-width: 30px;
+    font-size: 12px;
+  }
+  .menu span {
+    display: none;
+  }
+}
