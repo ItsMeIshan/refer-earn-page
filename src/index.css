@@ -40,6 +40,11 @@ body {
   font-size: 16px;
 }
 
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .dashboard {
   padding: 1.2em;
   border-radius: 20px;
@@ -47,6 +52,7 @@ body {
   box-shadow: -2px 5px 36px -24px #4d4d4d;
   display: flex;
   flex-direction: column;
+  flex: 1 1;
 }
 .dashboard-item-container {
   display: flex;
@@ -72,6 +78,142 @@ body {
   padding: 0.7em 1.5em;
   border-radius: 28px;
   align-self: center;
+  margin-top: 1.5rem;
+}
+
+.referral-code-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.referral-heading {
+  font-weight: 400;
+  font-size: 24px;
+  color: #800080;
+}
+
+.referral-code {
+  align-self: center;
+  color: #800080;
+  letter-spacing: 17px;
+  font-size: 20px;
+  padding: 0.8em;
+  border: 1px solid;
+  text-align: center;
+  border-width: 5px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to left,
+    rgba(128, 0, 128, 1),
+    rgba(255, 134, 76, 1)
+  );
+  border-radius: 10px;
+}
+.friends-referred-referral-code {
+  flex-grow: 2;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+}
+.step-container {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+.step-logo {
+  background-color: rgba(217, 217, 217, 0.25);
+  padding: 1.11em;
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+.step-heading {
+  font-size: 16px;
+}
+.step-content {
+  color: #4d4d4d;
+  font-weight: 300;
+}
+.friends-enrolled-btn {
+  text-decoration: none;
+  color: #800080;
+}
+
+.friends-reffered-heading {
+  color: #800080;
+  font-size: 20px;
+}
+.friends-number {
+  color: #626262;
+  font-weight: 300;
+}
+
+.enrollment-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-container {
+  margin: 1rem;
+  padding: 1.1em 1em;
+  border-radius: 20px;
+  background: linear-gradient(
+    to left,
+    rgba(128, 0, 128, 1),
+    rgba(255, 134, 76, 1)
+  );
+  max-width: 350px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.card-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.card-date {
+  font-weight: 300;
+  font-size: 14px;
+  color: white;
+}
+.card-courses {
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.course-chip {
+  color: white;
+  font-size: 14px;
+  border: 1px solid #eeaeae;
+  padding: 0.3em 0.7em;
+  border-radius: 20px;
+  font-weight: 300;
+  margin: 0.2rem;
+}
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-left: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+.card-referral-amount {
+  color: white;
+  font-weight: 300;
+}
+.card-referral-price {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+}
+.hero-friends-refer {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Media Queries */
@@ -81,6 +223,12 @@ body {
   }
   .menu span {
     font-size: 16px;
+  }
+  .dashboard-value {
+    font-size: 25px;
+  }
+  .dashboard-container {
+    width: 95%;
   }
 }
 
@@ -102,7 +250,6 @@ body {
   }
   .dropdown svg path {
     fill: #fff;
-    /* fill: #fff; */
   }
   .menu {
     min-width: 150px;
@@ -118,6 +265,29 @@ body {
   .navigation {
     margin: 0.3rem;
   }
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .dashboard-value {
+    font-size: 20px;
+  }
+  .withdraw-btn {
+    padding: 0.4em 1em;
+  }
+  .enrollment-cards-container {
+    justify-content: center;
+  }
+  .friends-referred-referral-code {
+    flex-grow: 0;
+  }
+  .friends-referred-referral-code span {
+    font-size: 16px;
+  }
+  .friends-referred-referral-code input {
+    font-size: 16px;
+    letter-spacing: 11px;
+    padding: 0.4em;
+  }
 }
 @media screen and (max-width: 325px) {
   .menu {
@@ -126,5 +296,13 @@ body {
   }
   .menu span {
     display: none;
+  }
+  .friends-referred-referral-code input {
+    font-size: 14px;
+    letter-spacing: 8px;
+    padding: 0.3em;
+  }
+  .hero-friends-refer {
+    flex-direction: column;
   }
 }

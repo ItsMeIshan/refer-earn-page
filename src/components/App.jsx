@@ -1,15 +1,24 @@
+import { Outlet } from "react-router-dom";
 import { routes } from "../utils/constants";
+// import FriendsReffered from "./FriendsRefferedScreen";
 import Header from "./Header";
-import ReferScreen from "./Refer&EarnScreen";
+// import ReferScreen from "./Refer&EarnScreen";
 import RouteComponent from "./RouteComponent";
 
 function App() {
   return (
     <>
       <Header />
+
       <RouteComponent routes={routes} />
-      <ReferScreen />
-      <span className="terms-conditions">Terms & Conditions</span>
+      <Outlet />
+      {/* <FriendsReffered />
+      <ReferScreen /> */}
+      <div style={{ maxWidth: "1200px" }}>
+        <div style={{ margin: "1rem auto", width: "90%" }}>
+          <span className="terms-conditions">Terms & Conditions</span>
+        </div>
+      </div>
     </>
   );
 }
